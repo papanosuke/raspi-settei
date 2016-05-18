@@ -1,0 +1,3 @@
+cd /opt/motion-mmal
+sudo ./motion -n -c motion-mmalcam.conf
+cd ~/

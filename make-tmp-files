@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          make-tmp-files
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Required-Start:
+# Required-Stop:
+# Short-Description: Create /tmp/motion... files on tmpfs at startup
+# Description:       Create /tmp/motion... files needed by system daemon
+### END INIT INFO
+
+#
+# main()
+#
+case "${1:-''}" in
+  'start')
+
+
+    ############################
+    # prepare /tmp/motion file for ramdisk init on every boot
+
+    sudo mkdir -p /tmp_motion
+    sudo chown root.utmp /tmp_motion/
+
+   ;;
+  'stop')
+   ;;
+  'restart')
+   ;;
+  'reload'|'force-reload')
+   ;;
+  'status')
+   ;;
+  *)
+   echo "Usage: $SELF start"
+   exit 1
+   ;;
+esac
