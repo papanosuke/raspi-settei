@@ -2,10 +2,10 @@ require 'twitter'
 
 #カスタマーキー、アクセストークン指定
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key          =  "3RlO6WyYwiwHEEy2SlSAgwfPA"
-  config.consumer_secret       =  "PhfISYxBtSl61SerV7iQ4fthszvpf5IzrDJC4tAYSFx7PZDmkf"
-  config.access_token          =  "136484894-2qyEsTEiLMfmlRQmbSpqXuaszvuwuPSVr9Xc5H83"
-  config.access_token_secret   =  "GIoBkh5sYmsN72yUse6Z6GaebdV55IABJXoWRCanY0MdS"
+  config.consumer_key          =  "zSIRStW5JxKswlIeed6bDQRM9"
+  config.consumer_secret       =  "bwzVbHklgikNgfI0v5p9AE9GRMfQcvJbwm6yIwRw2rfusWl1aB"
+  config.access_token          =  "736541229823856644-U0dl9JSCThlzccUHqtyBdLvzp146LdS"
+  config.access_token_secret   =  "NbJBkd8AFaddQ8hA8umqJs7g5FXba17IV7SpCFTAgiOg8"
 end
 
 s=[]
