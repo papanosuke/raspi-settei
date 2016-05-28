@@ -13,4 +13,4 @@ File.open("sentences.txt","r") do |l|
     s.push(line)
   end
 end
-client.update(s.sample)
+client.update_with_media(s.sample,open("/home/pi/a.png"))
