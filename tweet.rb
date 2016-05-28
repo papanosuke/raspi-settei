@@ -24,11 +24,11 @@ dir.each do |file|
 end
 
 #削除
-begin 
-  dir.each do |file|
+dir.each do |file|
+  begin
     File.unlink(file)
+  rescue StandardError => ex
+  ensure
   end
-rescue StandardError => ex
-ensure
 end
 
