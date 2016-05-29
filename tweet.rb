@@ -21,14 +21,18 @@ dir = Dir.glob("/tmp_motion/**")
 #ツイート
 dir.each do |file|
   client.update_with_media(s.sample,open(file))
+  print "OK1!\n"
 end
 
 #削除
 dir.each do |file|
   begin
     File.unlink(file)
+    print "OK2!\n"
   rescue StandardError => ex
+    print "err3!\n"
   ensure
+    print "err4!\n"
   end
 end
 
