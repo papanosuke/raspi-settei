@@ -16,12 +16,14 @@ File.open("sentences.txt","r") do |l|
 end
 
 #tmpディレクトリ指定
-dir = Dir.glob("/tmp_motion/**")
+dir = Dir.glob("/tmp_motion/**").sort
 
 #ツイート
 dir.each_with_index do |file,i|
 ##p file
-  if i == 1
+##if i == dir.length - 1  ##検知した最初の画像をツイート
+  if i == dir.length - 1  ##検知した最初の画像をツイート
+##if i == 0               ##ツイートの直前画像をツイート  
     client.update_with_media(s.sample,open(file))
 ####print "OK1!\n"
   end
