@@ -27,7 +27,7 @@ dir.each_with_index do |file,i|
 ##if i == 0               ##ツイートの直前画像をツイート  
     client.update_with_media(s.sample,open(file))
 ##音声再生
-    system ('sudo aplay badswap.wav')
+    system ('sudo aplay koe1.wav')
 ####print "OK1!\n"
   end
 end
