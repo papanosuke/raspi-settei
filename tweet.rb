@@ -1,4 +1,7 @@
 require 'twitter'
+require 'date'
+
+nowtime = Time.now
 
 #カスタマーキー、アクセストークン指定
 client = Twitter::REST::Client.new do |config|
@@ -27,7 +30,14 @@ dir.each_with_index do |file,i|
 ##if i == 0               ##ツイートの直前画像をツイート  
     client.update_with_media(s.sample,open(file))
 ##音声再生
-    system ('sudo aplay koe1.wav')
+#   system ('sudo aplay koe1.wav')
+    if nowtime.hour >= 19 and nowtime.hour <= 21   
+      system ('sudo aplay badswap.wav')
+    elsif nowtime.hour >= 6 and nowtime.hour <= 8  
+      system ('sudo aplay badswap.wav')
+    else
+      system ('sudo aplay koe1.wav')
+    end
 ####print "OK1!\n"
   end
 end
